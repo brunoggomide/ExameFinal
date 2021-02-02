@@ -1,0 +1,59 @@
+<!-- Nome: Bruno Gabriel Gomide    Cod: 835550 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de multas</title>
+</head>
+<style>
+       #main{
+            margin: auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-size: 3vmin;
+            text-align: center;
+            padding: 8vh;
+            background-color: rgb(245, 75, 75);
+        }
+</style>
+<script>
+    function valid(){
+    window.alert("Multa inclusa no sistema! N° da multa: 101149")
+    }
+    function apagar(){
+        window.alert("As informações foram apagadas!")
+    }
+</script>
+<body>
+    <main id="main">
+        <i align="center">Gerador de multas</i><br>
+        <img align="center"  width="20%" height="50%" src="Imagens/logo jusbrasil.jpeg">
+        
+
+    <form id="multa">
+        <br> <i>Modelo do veiculo: </i><input name="veiculo" size="40" required="" type="text"> <i>Placa: </i><input name="Placa" required="" type="text" maxlength="7"><br>
+        <br> <i>Local da infração: </i><input name="Endereço" size="60" required="" type="text"><br>
+        <br> <i>Data da infração: </i><input name="Data" required="" type="date"> <i>Hora da infração</i><input name="Hora" required="" type="time"><br>
+        <br> <i>Motivo da infração: </i><input name="Motivo" size="40" required="" type="text"><br>
+
+        <br><i>Gravidade: </i>
+        <input list="browser" required="">
+        <datalist id="browser">
+          <option value="Leve">
+          <option value="Média">
+          <option value="Grave">
+          <option value="Gravíssima">
+        </datalist> <i>Valor da multa: </i><input name="Valor" required="" type="text" size="5"><br>
+
+        <br> <i>Identificação do agente/policial: </i><input name="matricula" size="5" required="" type="text"><br>
+
+        <br><input type=submit value="Cadastrar" onclick="valid ()"> 
+        <input type=reset value="Apagar" onclick="return apagar ()">
+        <a href="index.html"><input type="button" value="voltar"></a>
+
+    </main>
+
+    </form>
+</body>
+</html>

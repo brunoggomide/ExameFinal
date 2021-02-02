@@ -1,0 +1,46 @@
+<!-- Nome: Bruno Gabriel Gomide    Cod: 835550 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de veiculos</title>
+
+    <script>
+        function checaplaca(){
+        d = document.getElementById("placa");
+        campo = document.getElementById("placa")
+        if (campo.value=="BMW2020")
+        document.write ("<i> Veiculo: BMW 320i <br> Ano/mod: 2020/20 <br> Cor: Prata <br> Renavam: 00019715174 <br> Chassi: 1548753 <br> Proprietário: João da Silva <br> CPF: 18140654825 <br> CNH: 52761823109 </i>")
+        else if (campo.value=="ABC1234")
+        document.write ("<i> Veiculo: Chevrolet Onix <br> Ano/mod: 2019/20 <br> Cor: Cinza <br> Renavam: 00011786385 <br> Chassi: 7416944 <br> Proprietário: Maria Helena Freitas <br> CPF: 36561805801 <br> CNH: 23143418648 </i>")
+        else if (campo.value=="CSS0000")
+        document.write ("<i> Veiculo: Fiat Toro <br> Ano/mod: 2018/19 <br> Cor: Preta <br> Renavam: 00010936147 <br> Chassi: 2145964 <br> Proprietário: José Brandão <br> CPF: 67468073805 <br> CNH: 06379478604 </i>")
+        }
+    </script>
+
+<style>
+            #main{
+            margin: auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-size: 5vmin;
+            text-align: center;
+            padding: 25vh;
+            background-color: rgb(156, 156, 156);
+        }
+</style>
+</head>
+<body>
+    <main id="main">
+        <i align="center">Consulta de veiculos</i><br>
+        <img align="center"  width="20%" height="50%" src="Imagens/placa.jpg"><br>
+
+
+<br><i>Informe a placa: </i><input name="placa" type="text" id="placa" maxlength="7"  required="" onblur="checaplaca()"> <br>
+<br><input type="submit" value="Verificar" onclick="checaplaca()" /> <a href="index.html"><input type="button" value="voltar"></a>
+
+</main>
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Nome: Bruno Gabriel Gomide    Cod: 835550 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar multas</title>
+</head>
+<style>
+#main{
+            margin: auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-size: 5vmin;
+            text-align: center;
+            padding: 28vh;
+            background-color: rgb(247, 160, 0);
+        }
+</style>
+
+<script>
+function checamultas(){
+        d = document.getElementById("multa");
+        campo = document.getElementById("multa")
+        if (campo.value=="123456")
+        document.write ("<i>N° da multa: 123456 <br> Data da multa: 23/02/2020 <br> hora da multa: 12:33 hrs <br>Local da infração: Rua XXXXXXXXX esq/c Av YYYYYYYYYY <br> Infração: Avançar o sinal vermelho <br> Gravidade: Gravíssima <br> Pontos perdidos: 7 pontos <br> Valor: 293,47 <br> Placa do veiculo: BMW2020 </i>")
+        else if (campo.value=="654321")
+        document.write ("N° da multa: 654321 <br> Data da multa: 11/05/2020 <br> hora da multa: 17:45 hrs <br>Local da infração: Rua XXXXXXXXX <br> Infração: Estacionar em local proibido <br> Gravidade: Média <br> Pontos perdidos: 3 pontos <br> Valor: 130,16 <br> Placa do veiculo: CSS0000 </i>")
+        }
+</script>
+<body>
+    <main id="main">
+        <i align="center">Consulta de multas</i><br>
+        <img align="center"  width="20%" height="50%" src="Imagens/multas.jpg"><br>
+
+        <br><i>Informe o numero da multa: </i><input name="multa" type="text" id="multa" maxlength="9"  required="" onblur="checamultas()"> <br>
+        <br><input type="submit" value="Verificar" onclick="checamultas()"> <a href="cadastro recursos.html"><input type="submit" value="Cadastrar recurso"> </a> <a href="index.html"><input type="button" value="voltar"></a>
+    </main>
+</body>
+</html>

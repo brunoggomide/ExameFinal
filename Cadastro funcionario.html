@@ -1,0 +1,100 @@
+<!-- Nome: Bruno Gabriel Gomide    Cod: 835550 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+            #main{
+            margin: auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-size: 3vmin;
+            text-align: center;
+            padding: 20vh;
+            background-color: rgb(31, 31, 238);
+        }
+</style>
+<script>
+    function apagar(){
+        window.alert("As informações foram apagadas!")
+    }
+    function valid_cpf(cpf){
+    var i, num, digitos, iguais, soma, verificador;
+	iguais = 1;
+	if (cpf < 11)
+	return false;
+
+	for (i = 0; i < 1; i++)
+	if (cpf.charAt(i) != cpf.charAt(i + 1))
+	{
+	iguais = 0;
+	break;
+	}
+
+	if (!iguais)
+	{
+	num = cpf.substring(0,9);
+	digitos = cpf.substring(9);
+    soma = 0;
+
+	for (i = 10; i > 1; i--)
+    soma += num.charAt(10 - i) * i;
+	verificador = soma % 11 < 2 ? 0 : 11 - soma % 11;
+
+	if (verificador != digitos.charAt(0))
+	return false;
+	num = cpf.substring(0,10);
+	soma = 0;
+
+	for (i = 11; i > 1; i--)
+	soma += num.charAt(11 - i) * i;
+	verificador = soma % 11 < 2 ? 0 : 11 - soma % 11;
+
+	if (verificador != digitos.charAt(1))
+	return false;
+	return true;
+	}
+	else
+	return false;
+	}
+
+function valid(){
+	if(valid_cpf(document.getElementById('CPF').value))
+	window.alert('Funcionário cadastrado! Matricula: 27415');
+		else
+		window.alert('CPF Inválido');
+		}
+</script>
+<body>
+    <main id="main">
+        <i align="center">Cadastro de Funcionário</i><br>
+        <img align="center"  width="20%" height="50%" src="Imagens/funcionario.jpg">
+    
+<form name="form1">
+    
+    <br><i>Nome Completo: </i><input name="name" size="60" required="" type="text"><br>
+    <br><i>CPF: </i><input name="CPF" type="text" required="" id="CPF" maxlength="11" /> 
+    <i>Data de nascimento: </i><input name="Data" required="" type="date"> <br>
+    <br> <i>Endereço: </i><input name="Endereço" size="60" required="" type="text"> <i>Numero: </i><input name="num" size="5" required="" type="text"><br>
+
+    <br><i>Cargo: </i>
+    <input list="browser" required="">
+    <datalist id="browser">
+      <option value="Administrativo">
+      <option value="Agente de trânsito">
+      <option value="Fiscal de pátio">
+      <option value="Policial">
+      <option value="Técnico em informática">
+    </datalist> <i>Data de adminssão: </i><input name="Data" required="" type="date"><br>
+
+
+    <br><input type=submit value="Cadastrar" onclick="valid ()"> 
+    <input type=reset value="Apagar" onclick="return apagar ()">
+    <a href="index.html"><input type="button" value="voltar"></a>
+</main>
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- Nome: Bruno Gabriel Gomide    Cod: 835550 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar recursos</title>
+</head>
+<script>
+       function checarecursos(){
+        d = document.getElementById("recurso");
+        campo = document.getElementById("recurso")
+        if (campo.value=="123456789")
+        document.write ("<i> Recurso indeferido <br> N° da multa: 114579 <br> Data do recurso: 28/07/2020 <br> hora do recurso: 14:37 hrs <br> Infração: Avançar o sinal vermelho <br> Data do julgamento: 30/09/2020 - 11 hrs <br> Comentário do Juri: Provas insuficientes </i>")
+        else if (campo.value=="987654321")
+        document.write ("<i> Recurso concedido <br> N° da multa: 1597451 <br> Data do recurso: 09/09/2020 <br> hora do recurso: 09:18 hrs <br> Infração: Estacionar em local proibido <br> Data do julgamento: 12/11/2020 - 14 hrs <br> Comentário do Juri: Provas cabíveis </i>")
+        }
+</script>
+<style>
+       #main{
+            margin: auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-size: 5vmin;
+            text-align: center;
+            padding: 28vh;
+            background-color: rgb(255, 255, 107);
+        }
+</style>
+<body>
+    <main id="main">
+        <i align="center">Consulta de recursos</i><br>
+        <img align="center"  width="20%" height="50%" src="Imagens/recurso.jpg"><br>
+
+        <br><i>Informe o numero do recurso: </i><input name="recurso" type="text" id="recurso" maxlength="9"  required="" onblur="checarecursos()"> <br>
+        <br><input type="submit" value="Verificar" onclick="checarecursos()"> <a href="index.html"><input type="button" value="voltar"></a>
+    </main>
+</body>
+</html>
